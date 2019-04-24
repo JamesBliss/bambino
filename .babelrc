@@ -3,5 +3,5 @@
   "presets": ["@babel/preset-env"],
 
   // some additional plugins
-  "plugins": ["babel-plugin-rewire" ,"babel-plugin-styled-components", "@babel/plugin-proposal-class-properties", "@babel/plugin-syntax-dynamic-import"]
+  "plugins": ["babel-plugin-styled-components", "@babel/plugin-proposal-class-properties", "@babel/plugin-syntax-dynamic-import"]
 }

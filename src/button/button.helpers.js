@@ -3,7 +3,6 @@ import { css } from 'styled-components';
 
 // Loop over themes and render theme based css
 export const renderTheme = (themes, appearance) => {
-  console.log({ appearance }, { themes });
   const theme = themes.buttons[appearance];
 
 
