@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
 // THEMES
@@ -61,9 +61,7 @@ const StyledButton = styled.button.attrs(() => ({ as: PropFilter }))`
 
 // Support for filtering custom props from being passed to elements
 const Button = ({ as, FORCE_AS, ...props }) => {
-  return (
-    <StyledButton element={ FORCE_AS || as } { ...props } />
-  );
+  return <StyledButton element={ FORCE_AS || as } { ...props } />;
 };
 
 // Default props
@@ -77,7 +75,7 @@ Button.defaultProps = {
   appearance: 'default',
   fullWidth: false,
   circle: false,
-  theme: defaultTheme // supplied by default theme
+  theme: defaultTheme // supplied by default theme within bambino
 };
 
 // Prop type check
@@ -94,16 +92,20 @@ Button.propTypes = {
   margin: PropTypes.string,
   appearance: PropTypes.oneOf([
     'default',
-    'default-clear',
-    'default-solid',
+    'default-outline',
     'default-floating',
     'inverse',
-    'inverse-clear',
+    'inverse-outline',
     'inverse-floating',
-    'inverse-solid',
     'error',
+    'error-outline',
+    'error-floating',
     'warning',
-    'success'
+    'warning-outline',
+    'warning-floating',
+    'success',
+    'success-outline',
+    'success-floating'
   ]),
   fullWidth: PropTypes.bool,
   circle: PropTypes.bool,
@@ -113,4 +115,4 @@ Button.propTypes = {
 Button.displayName = 'Button';
 
 // export
-export default Button;
+export default withTheme(Button);

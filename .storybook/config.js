@@ -1,4 +1,14 @@
-import { configure } from '@storybook/react';
+import { configure, addDecorator, addParameters } from '@storybook/react';
+
+addParameters({
+  options: {
+    theme: {
+      brandTitle: 'Bambino',
+      brandUrl: 'https://gitlab.com/LUSHDigital/fed/packages/ui'
+    },
+    hierarchyRootSeparator: /\|/,
+  }
+})
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../.stories', true, /\.stories\.js$/);

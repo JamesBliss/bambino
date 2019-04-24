@@ -5,11 +5,6 @@ const theme = {
     'default': {
       background: colour.black,
       borderColor: colour.black,
-      color: colour.white
-    },
-    'default-solid': {
-      background: colour.black,
-      borderColor: colour.black,
       color: colour.white,
       hover: {
         background: colour.black40,
@@ -27,7 +22,7 @@ const theme = {
         color: colour.white
       }
     },
-    'default-clear': {
+    'default-outline': {
       background: 'transparent',
       borderColor: colour.black,
       color: colour.black,
@@ -70,11 +65,6 @@ const theme = {
     'inverse': {
       background: colour.white,
       borderColor: colour.white,
-      color: colour.black
-    },
-    'inverse-solid': {
-      background: colour.white,
-      borderColor: colour.white,
       color: colour.black,
       hover: {
         background: colour.black25,
@@ -92,24 +82,24 @@ const theme = {
         color: colour.black
       }
     },
-    'inverse-clear': {
+    'inverse-outline': {
       background: 'transparent',
       borderColor: colour.white,
       color: colour.white,
       hover: {
         background: 'transparent',
-        borderColor: colour.black60,
-        color: colour.black60
+        borderColor: colour.black25,
+        color: colour.black25
       },
       active: {
         background: 'transparent',
-        borderColor: colour.black40,
-        color: colour.black40
+        borderColor: colour.black60,
+        color: colour.black60
       },
       disabled: {
         background: 'transparent',
-        borderColor: colour.black25,
-        color: colour.black25
+        borderColor: colour.black40,
+        color: colour.black40
       }
     },
     'inverse-floating': {
@@ -119,17 +109,17 @@ const theme = {
       hover: {
         background: 'transparent',
         borderColor: 'transparent',
-        color: colour.white
+        color: colour.black25
       },
       active: {
         background: 'transparent',
         borderColor: 'transparent',
-        color: colour.white
+        color: colour.black60
       },
       disabled: {
         background: 'transparent',
         borderColor: 'transparent',
-        color: colour.white
+        color: colour.black40
       }
     },
     'error': {
@@ -152,6 +142,46 @@ const theme = {
         color: colour.white
       }
     },
+    'error-outline': {
+      background: 'transparent',
+      borderColor: colour.red,
+      color: colour.red,
+      hover: {
+        background: 'transparent',
+        borderColor: colour.red60,
+        color: colour.red60
+      },
+      active: {
+        background: 'transparent',
+        borderColor: colour.red40,
+        color: colour.red40
+      },
+      disabled: {
+        background: 'transparent',
+        borderColor: colour.red25,
+        color: colour.red25
+      }
+    },
+    'error-floating': {
+      background: 'transparent',
+      borderColor: 'transparent',
+      color: colour.red,
+      hover: {
+        background: 'transparent',
+        borderColor: 'transparent',
+        color: colour.red60
+      },
+      active: {
+        background: 'transparent',
+        borderColor: 'transparent',
+        color: colour.red40
+      },
+      disabled: {
+        background: 'transparent',
+        borderColor: 'transparent',
+        color: colour.red25
+      }
+    },
     'warning': {
       background: colour.amber,
       borderColor: colour.amber,
@@ -172,6 +202,46 @@ const theme = {
         color: colour.white
       }
     },
+    'warning-outline': {
+      background: 'transparent',
+      borderColor: colour.amber,
+      color: colour.amber,
+      hover: {
+        background: 'transparent',
+        borderColor: colour.amber60,
+        color: colour.amber60
+      },
+      active: {
+        background: 'transparent',
+        borderColor: colour.amber40,
+        color: colour.amber40
+      },
+      disabled: {
+        background: 'transparent',
+        borderColor: colour.amber25,
+        color: colour.amber25
+      }
+    },
+    'warning-floating': {
+      background: 'transparent',
+      borderColor: 'transparent',
+      color: colour.amber,
+      hover: {
+        background: 'transparent',
+        borderColor: 'transparent',
+        color: colour.amber60
+      },
+      active: {
+        background: 'transparent',
+        borderColor: 'transparent',
+        color: colour.amber40
+      },
+      disabled: {
+        background: 'transparent',
+        borderColor: 'transparent',
+        color: colour.amber25
+      }
+    },
     'success': {
       background: colour.green,
       borderColor: colour.green,
@@ -190,6 +260,46 @@ const theme = {
         background: colour.green25,
         borderColor: colour.green25,
         color: colour.white
+      }
+    },
+    'success-outline': {
+      background: 'transparent',
+      borderColor: colour.green,
+      color: colour.green,
+      hover: {
+        background: 'transparent',
+        borderColor: colour.green60,
+        color: colour.green60
+      },
+      active: {
+        background: 'transparent',
+        borderColor: colour.green40,
+        color: colour.green40
+      },
+      disabled: {
+        background: 'transparent',
+        borderColor: colour.green25,
+        color: colour.green25
+      }
+    },
+    'success-floating': {
+      background: 'transparent',
+      borderColor: 'transparent',
+      color: colour.green,
+      hover: {
+        background: 'transparent',
+        borderColor: 'transparent',
+        color: colour.green60
+      },
+      active: {
+        background: 'transparent',
+        borderColor: 'transparent',
+        color: colour.green40
+      },
+      disabled: {
+        background: 'transparent',
+        borderColor: 'transparent',
+        color: colour.green25
       }
     }
   },

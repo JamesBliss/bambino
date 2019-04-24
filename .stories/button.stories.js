@@ -1,11 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import { ThemeProvider } from 'styled-components';
 
 // components //
-import { Button, theme } from '../src';
+import { Button, theme, colour } from '../src';
 
 // custom theme
 const fancyTheme = {
@@ -14,6 +13,7 @@ const fancyTheme = {
   buttons: {
     ...theme.buttons,
     'default': {
+      ...theme.buttons.default,
       background: 'hotpink',
       borderColor: 'hotpink',
       color: 'red'
@@ -27,36 +27,32 @@ storiesOf('Button', module)
   // decorators
   // hide the theme prop from table as it's default value is messy
   .addDecorator(withInfo({ excludedPropTypes: ['theme'] }))
-  .addDecorator(withKnobs)
   .addParameters({
     options: { showAddonPanel: false },
-    notes: { markdown: README },
+    // notes: { markdown: README },
     info: { header: false }
   })
 
   // stories
   .add('Default', () => (
-    <table>
+    <table style={{ background: colour.mediumgray, padding: '10px'}}>
       <thead>
         <tr>
-          <th />
-          <th>
+          <th style={{ borderBottom: `1px solid ${colour.darkgray}`, padding: '5px 10px 15px'}} />
+          <th style={{ borderBottom: `1px solid ${colour.darkgray}`, padding: '5px 10px 15px'}}>
             name
           </th>
-          <th>
-            *-solid
-          </th>
-          <th>
+          <th style={{ borderBottom: `1px solid ${colour.darkgray}`, padding: '5px 10px 15px'}}>
             *-clear
           </th>
-          <th>
+          <th style={{ borderBottom: `1px solid ${colour.darkgray}`, padding: '5px 10px 15px'}}>
             *-floating
           </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>
+          <td style={{ borderRight: `1px solid ${colour.darkgray}`, padding: '5px 10px 5px'}}>
             default
           </td>
           <td>
@@ -65,12 +61,7 @@ storiesOf('Button', module)
             </Button>
           </td>
           <td>
-            <Button appearance='default-solid'>
-              Button
-            </Button>
-          </td>
-          <td>
-            <Button appearance='default-clear'>
+            <Button appearance='default-outline'>
               Button
             </Button>
           </td>
@@ -81,7 +72,7 @@ storiesOf('Button', module)
           </td>
         </tr>
         <tr>
-          <td>
+          <td style={{ borderRight: `1px solid ${colour.darkgray}`, padding: '5px 10px 5px'}}>
             inverse
           </td>
           <td>
@@ -90,12 +81,7 @@ storiesOf('Button', module)
             </Button>
           </td>
           <td>
-            <Button appearance='inverse-solid'>
-              Button
-            </Button>
-          </td>
-          <td>
-            <Button appearance='inverse-clear'>
+            <Button appearance='inverse-outline'>
               Button
             </Button>
           </td>
@@ -106,7 +92,7 @@ storiesOf('Button', module)
           </td>
         </tr>
         <tr>
-          <td>
+          <td style={{ borderRight: `1px solid ${colour.darkgray}`, padding: '5px 10px 5px'}}>
             success
           </td>
           <td>
@@ -114,12 +100,19 @@ storiesOf('Button', module)
               Button
             </Button>
           </td>
-          <td />
-          <td />
-          <td />
+          <td>
+            <Button appearance='success-outline'>
+              Button
+            </Button>
+          </td>
+          <td>
+            <Button appearance='success-floating'>
+              Button
+            </Button>
+          </td>
         </tr>
         <tr>
-          <td>
+          <td style={{ borderRight: `1px solid ${colour.darkgray}`, padding: '5px 10px 5px'}}>
             warning
           </td>
           <td>
@@ -127,28 +120,42 @@ storiesOf('Button', module)
               Button
             </Button>
           </td>
-          <td />
-          <td />
-          <td />
+          <td>
+            <Button appearance='warning-outline'>
+              Button
+            </Button>
+          </td>
+          <td>
+            <Button appearance='warning-floating'>
+              Button
+            </Button>
+          </td>
         </tr>
         <tr>
-          <td>
-            errro
+          <td style={{ borderRight: `1px solid ${colour.darkgray}`, padding: '5px 10px 5px'}}>
+            error
           </td>
           <td>
             <Button appearance='error'>
               Button
             </Button>
           </td>
-          <td />
-          <td />
-          <td />
+          <td>
+            <Button appearance='error-outline'>
+              Button
+            </Button>
+          </td>
+          <td>
+            <Button appearance='error-floating'>
+              Button
+            </Button>
+          </td>
         </tr>
       </tbody>
     </table>
   ))
   .add('Theme', () => (
-    <ThemeProvider theme={ fancyTheme }>
+    <ThemeProvider theme={fancyTheme}>
       <div>
         <Button>default theme overridden by a custom themeProvider</Button>
         <Button appearance='inverse'>Themed</Button>

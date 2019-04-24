@@ -3,7 +3,9 @@ import { css } from 'styled-components';
 
 // Loop over themes and render theme based css
 export const renderTheme = (themes, appearance) => {
+  console.log({ appearance }, { themes });
   const theme = themes.buttons[appearance];
+
 
   return css`
     transition: color 0.3s, background 0.3s, border-color 0.3s;
@@ -77,7 +79,7 @@ export const renderFullWidth = (fullWidth) => {
 export const PropFilter = ({
   /* eslint react/prop-types:0 */
   element,
-  fontSize,
+  textSize,
   align,
   padding,
   margin,

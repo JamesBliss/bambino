@@ -1,6 +1,7 @@
 {
   // ensures most commonly used transpilations e.g. import
-  "presets": ["env"],
-  // some additional plugins: Rewire (described in the Jest section)
-  "plugins": ["babel-plugin-rewire"]
+  "presets": ["@babel/preset-env"],
+
+  // some additional plugins
+  "plugins": ["babel-plugin-rewire" ,"babel-plugin-styled-components", "@babel/plugin-proposal-class-properties", "@babel/plugin-syntax-dynamic-import"]
 }
